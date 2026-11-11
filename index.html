@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dashboard_fratelli_giacomel</title>
+</head>
+<body>
+<div id="app" style="font-family:sans-serif;padding:40px;color:#888">Caricamento della dashboard… (serve la connessione a internet)</div>
+<script>
+const DASHBOARD = {
+  "period": "Brand Demo · Ottobre 2026",
+  "thanks": "",
+  "brand": "grafite",
+  "accent": "arancio",
+  "generatore": "esempio dimostrativo · Developed by Andrea Carminati",
+  "tabs": [
+    {
+      "label": "Paid – mese",
+      "title": "Esempio – Campagne del mese",
+      "subtitle": "Dati inventati, solo per mostrare il motore grafico.",
+      "blocks": [
+        {
+          "type": "kpi",
+          "items": [
+            {
+              "label": "Spesa",
+              "value": "€ 4.250,00"
+            },
+            {
+              "label": "CPL",
+              "value": "€ 28,33"
+            },
+            {
+              "label": "Lead",
+              "value": "150"
+            },
+            {
+              "label": "Qualificati",
+              "value": "42",
+              "suffix": "(28,0%)",
+              "note": "% sui lead",
+              "highlight": true
+            },
+            {
+              "label": "Preventivi",
+              "value": "30",
+              "suffix": "(71,4%)",
+              "note": "% sui qualificati"
+            }
+          ]
+        },
+        {
+          "type": "cols",
+          "blocks": [
+            {
+              "type": "colonne",
+              "title": "Lead e qualificati per fonte",
+              "series": [
+                "Lead",
+                "Qualificati"
+              ],
+              "data": [
+                {
+                  "name": "Fonte A",
+                  "Lead": 20,
+                  "Qualificati": 6
+                },
+                {
+                  "name": "Fonte B",
+                  "Lead": 70,
+                  "Qualificati": 18
+                },
+                {
+                  "name": "Fonte C",
+                  "Lead": 40,
+                  "Qualificati": 10
+                },
+                {
+                  "name": "Fonte D",
+                  "Lead": 20,
+                  "Qualificati": 8
+                }
+              ]
+            },
+            {
+              "type": "barre",
+              "title": "CPL per fonte",
+              "unit": "€",
+              "data": [
+                {
+                  "name": "Fonte A",
+                  "value": 60,
+                  "display": "€ 60,00"
+                },
+                {
+                  "name": "Fonte B",
+                  "value": 18.5,
+                  "display": "€ 18,50"
+                },
+                {
+                  "name": "Fonte C",
+                  "value": 30,
+                  "display": "€ 30,00"
+                },
+                {
+                  "name": "Fonte D",
+                  "value": 22,
+                  "display": "€ 22,00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Dettaglio per fonte",
+          "subtitle": "Ottobre 2026",
+          "head": [
+            "Fonte",
+            "Spesa",
+            "Lead",
+            "Qualificati",
+            "% Qualificati",
+            "CPL"
+          ],
+          "rows": [
+            [
+              "Fonte A",
+              "€ 1.200,00",
+              20,
+              6,
+              "30,0%",
+              "€ 60,00"
+            ],
+            [
+              "Fonte B",
+              "€ 1.295,00",
+              70,
+              18,
+              "25,7%",
+              "€ 18,50"
+            ],
+            [
+              "Fonte C",
+              "€ 1.200,00",
+              40,
+              10,
+              "25,0%",
+              "€ 30,00"
+            ],
+            [
+              "Fonte D",
+              "€ 555,00",
+              20,
+              8,
+              "40,0%",
+              "€ 27,75"
+            ]
+          ],
+          "total": [
+            "TOTALE",
+            "€ 4.250,00",
+            150,
+            42,
+            "28,0%",
+            "€ 28,33"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Organico – mese",
+      "title": "Esempio – Lead organici",
+      "subtitle": "Esempio di fonte dominante esclusa dal grafico.",
+      "blocks": [
+        {
+          "type": "avviso",
+          "text": "Attenzione: il 70,0% dei record non ha la fonte del lead compilata (dato di esempio)."
+        },
+        {
+          "type": "cols",
+          "blocks": [
+            {
+              "type": "colonne",
+              "title": "Lead per fonte (esclusa Fonte X)",
+              "data": [
+                {
+                  "name": "Sito",
+                  "value": 12
+                },
+                {
+                  "name": "Telefono",
+                  "value": 9
+                },
+                {
+                  "name": "Walk In",
+                  "value": 5
+                },
+                {
+                  "name": "Evento",
+                  "value": 3
+                }
+              ],
+              "note": "Fonte X esclusa dal grafico per leggibilità: vedi riquadro e tabella."
+            },
+            {
+              "type": "evidenza",
+              "title": "Fonte X",
+              "rows": [
+                {
+                  "name": "Lead",
+                  "value": 120
+                },
+                {
+                  "name": "Opportunità",
+                  "value": 35
+                },
+                {
+                  "name": "Contratti",
+                  "value": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "barre",
+          "title": "Top 5 modelli per contratti",
+          "data": [
+            {
+              "name": "Modello 1",
+              "value": 9
+            },
+            {
+              "name": "Modello 2",
+              "value": 5
+            },
+            {
+              "name": "Modello 3",
+              "value": 3
+            },
+            {
+              "name": "Modello 4",
+              "value": 2
+            },
+            {
+              "name": "Modello 5",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+</script>
+<script src="https://andrea300992.github.io/dashboard-giacomel/motore.js"></script>
+</body>
+</html>
