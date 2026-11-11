@@ -172,81 +172,99 @@ const DASHBOARD = {
     {
       "label": "Organico – mese",
       "title": "Esempio – Lead organici",
-      "subtitle": "Esempio di fonte dominante esclusa dal grafico.",
+      "subtitle": "Esempio di fonte fuori scala e classifica modelli.",
       "blocks": [
         {
           "type": "avviso",
           "text": "Attenzione: il 70,0% dei record non ha la fonte del lead compilata (dato di esempio)."
         },
         {
-          "type": "cols",
-          "blocks": [
+          "type": "riempimento",
+          "title": "Lead e opportunità per fonte",
+          "legend": [
+            "Lead",
+            "Opportunità"
+          ],
+          "data": [
             {
-              "type": "colonne",
-              "title": "Lead per fonte (esclusa Fonte X)",
-              "data": [
-                {
-                  "name": "Sito",
-                  "value": 12
-                },
-                {
-                  "name": "Telefono",
-                  "value": 9
-                },
-                {
-                  "name": "Walk In",
-                  "value": 5
-                },
-                {
-                  "name": "Evento",
-                  "value": 3
-                }
-              ],
-              "note": "Fonte X esclusa dal grafico per leggibilità: vedi riquadro e tabella."
+              "name": "Fonte X",
+              "value": 300,
+              "part": 60
             },
             {
-              "type": "evidenza",
-              "title": "Fonte X",
-              "rows": [
-                {
-                  "name": "Lead",
-                  "value": 120
-                },
-                {
-                  "name": "Opportunità",
-                  "value": 35
-                },
-                {
-                  "name": "Contratti",
-                  "value": 6
-                }
-              ]
+              "name": "Sito",
+              "value": 40,
+              "part": 4
+            },
+            {
+              "name": "Telefono",
+              "value": 15,
+              "part": 13
+            },
+            {
+              "name": "Walk In",
+              "value": 6,
+              "part": 5
+            },
+            {
+              "name": "Evento",
+              "value": 2,
+              "part": 1
             }
           ]
         },
         {
-          "type": "barre",
-          "title": "Top 5 modelli per contratti",
-          "data": [
+          "type": "cols",
+          "blocks": [
             {
-              "name": "Modello 1",
-              "value": 9
+              "type": "classifica",
+              "title": "Top 5 modelli del mese",
+              "unit": "contratti",
+              "data": [
+                {
+                  "name": "Modello 1",
+                  "value": 9
+                },
+                {
+                  "name": "Modello 2",
+                  "value": 5
+                },
+                {
+                  "name": "Modello 3",
+                  "value": 3
+                },
+                {
+                  "name": "Modello 4",
+                  "value": 2
+                },
+                {
+                  "name": "Modello 5",
+                  "value": 1
+                }
+              ]
             },
             {
-              "name": "Modello 2",
-              "value": 5
-            },
-            {
-              "name": "Modello 3",
-              "value": 3
-            },
-            {
-              "name": "Modello 4",
-              "value": 2
-            },
-            {
-              "name": "Modello 5",
-              "value": 1
+              "type": "classifica",
+              "style": "righe",
+              "title": "Mese precedente",
+              "data": [
+                {
+                  "name": "Modello 1",
+                  "value": 6
+                },
+                {
+                  "name": "Modello 3",
+                  "value": 4
+                },
+                {
+                  "name": "Modello 2",
+                  "value": 4
+                },
+                {
+                  "name": "Modello 5",
+                  "value": 1
+                }
+              ]
             }
           ]
         }
