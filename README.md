@@ -13,8 +13,10 @@ Tutta la parte grafica (stile, grafici, tabelle, navigazione) è in `motore.js`,
 <script>
 const DASHBOARD = { period: "...", tabs: [ ... ] };
 </script>
-<script src="https://andrea300992.github.io/dashboard-giacomel/motore.js"></script>
+<script src="https://andrea300992.github.io/dashboard-giacomel/motore.js" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Andrea300992/dashboard-giacomel@main/motore.js';document.body.appendChild(s)"></script>
 ```
+
+Se GitHub Pages non risponde, la stessa riga carica il motore dalla copia su jsDelivr (stesso file, stesso repository).
 
 - `motore.js` è sempre l'ultima versione: correggerlo qui aggiorna tutte le dashboard.
 - `versioni/` contiene le copie fisse di ogni versione rilasciata, per poter tornare indietro.
