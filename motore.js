@@ -1,12 +1,12 @@
 /*!
  * Dashboard Giacomel – motore grafico
- * Version 1.2.0 · build 2026-11-12
+ * Version 1.2.1 · build 2026-11-12
  * Developed by Andrea Carminati. All rights reserved.
  * Questo file disegna le dashboard: l'HTML generato contiene solo l'oggetto DASHBOARD con i dati.
  */
 (function () {
 "use strict";
-const ENGINE = { name: "Dashboard Giacomel", version: "1.2.0", build: "2026-11-12", author: "Andrea Carminati" };
+const ENGINE = { name: "Dashboard Giacomel", version: "1.2.1", build: "2026-11-12", author: "Andrea Carminati" };
 ENGINE.signature = `${ENGINE.name} engine v${ENGINE.version} (${ENGINE.build}) – Developed by ${ENGINE.author}`;
 if (window.DashboardGiacomel) return;
 window.DashboardGiacomel = Object.freeze(Object.assign({}, ENGINE));
@@ -470,7 +470,7 @@ function check(b) {
   }
   return "";
 }
-function where(id) { const p = String(id).split("-"); return `Capitolo ${+p[0] + 1}, blocco ${+p[1] + 1}${p[2] != null ? "." + (+p[2] + 1) : ""}`; }
+function where(id) { const p = String(id).replace(/^p/, "").split("-"); return `Capitolo ${+p[0] + 1}, blocco ${+p[1] + 1}${p[2] != null ? "." + (+p[2] + 1) : ""}`; }
 function errBox(id, msg) { return `<div class="err"><b>Dato da correggere · ${esc(String(id).startsWith("cap") ? "Capitolo " + (+String(id).slice(3) + 1) : where(id))}</b><span>${esc(msg)}</span></div>`; }
 function scan() {
   (DB.tabs || []).forEach((t, ti) => {

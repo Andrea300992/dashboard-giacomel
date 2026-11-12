@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>presentazione_fratelli_giacomel_demo</title>
+</head>
+<body>
+<div id="app" style="font-family:sans-serif;padding:40px;color:#888">Caricamento della presentazione… (serve la connessione a internet)</div>
+<script>
+// PRESENTAZIONE DIMOSTRATIVA: contenuti e numeri INVENTATI, solo per mostrare il motore grafico.
+const PRESENTAZIONE = {
+  title: "Piano lead Usato – primo trimestre",
+  period: "Demo · Novembre 2026",
+  thanks: "",
+  brand: "grafite",
+  accent: "arancio",
+  generatore: "presentazione dimostrativa (contenuti inventati)",
+  tabs: [
+    {
+      label: "Il punto",
+      title: "Dove siamo oggi",
+      subtitle: "La sintesi in una pagina: cifra chiave, cosa significa, cosa facciamo.",
+      blocks: [
+        { type: "messaggio", label: "Il numero del mese", value: "-18%", tono: "negativo", text: "lead dal sito rispetto al trimestre scorso, mentre i portali crescono.", note: "Dati inventati per la demo." },
+        { type: "kpi", items: [
+          { label: "Lead totali", value: "412", note: "ultimi 30 giorni" },
+          { label: "Dal sito", value: "96", suffix: "(23%)", highlight: true },
+          { label: "Costo per lead", value: "€ 31,40" },
+          { label: "Contratti", value: "38" }
+        ] },
+        { type: "commento", label: "Lettura", text: "Il calo del sito non dipende dal traffico, che è stabile, ma dal form: la richiesta di permuta allunga la compilazione e molti utenti abbandonano a metà.\nLa nostra ipotesi è che semplificando il form si recuperi buona parte dei lead persi." }
+      ]
+    },
+    {
+      label: "Analisi",
+      title: "Cosa ci dicono i dati",
+      subtitle: "Confronto tra canali e andamento delle ultime settimane.",
+      blocks: [
+        { type: "cols", blocks: [
+          { type: "colonne", title: "Lead per canale", series: ["Lead", "Contratti"], data: [
+            { name: "Sito", Lead: 96, Contratti: 12 },
+            { name: "Portali", Lead: 214, Contratti: 15 },
+            { name: "Social", Lead: 70, Contratti: 6 },
+            { name: "Telefono", Lead: 32, Contratti: 5 }
+          ] },
+          { type: "confronto", title: "Sito contro portali", evidenza: "sinistra",
+            left: { label: "Sito", value: "12,5%", title: "tasso di chiusura", items: ["Lead più caldi", "Nessuna commissione", "Form troppo lungo"] },
+            right: { label: "Portali", value: "7,0%", title: "tasso di chiusura", items: ["Molto volume", "Costo per lead in salita", "Clienti che confrontano più offerte"] },
+            conclusione: "Ogni lead del sito vale quasi il doppio di uno dai portali." }
+        ] },
+        { type: "griglia", title: "Tre segnali da tenere d'occhio", items: [
+          { icon: "giu", value: "-31%", title: "Form completati", text: "Abbandono concentrato sul passaggio della permuta." },
+          { icon: "su", value: "+22%", title: "Lead dai portali", text: "Crescono, ma con un costo per lead più alto.", evidenza: true },
+          { icon: "telefono", value: "4 h", title: "Tempo di risposta", text: "Media del primo contatto: obiettivo sotto 1 ora." }
+        ] },
+        { type: "commento", label: "Suggerimento", icon: "ricerca", title: "Cosa fanno gli altri", text: "Molti concessionari chiedono la permuta solo dopo il primo contatto, con un form di tre campi: nome, telefono, modello di interesse.", fonti: [{ name: "Esempio di fonte", url: "https://example.com" }] }
+      ]
+    },
+    {
+      label: "Proposta",
+      title: "Cosa proponiamo",
+      subtitle: "Tre azioni concrete, con chi le fa e quando.",
+      blocks: [
+        { type: "messaggio", label: "La proposta", icon: "razzo", text: "Form in 3 campi e risposta entro un'ora: obiettivo +40 lead al mese dal sito." },
+        { type: "azione", items: [
+          { text: "Ridurre il form a 3 campi", detail: "La permuta si chiede al telefono, non nel form.", chi: "Marketing", quando: "Dicembre", impatto: "alto" },
+          { text: "Avviso immediato al venditore di turno", detail: "Notifica sul telefono a ogni nuovo lead dal sito.", chi: "CRM", quando: "Dicembre" },
+          { text: "Spostare 500 € dai portali al sito", detail: "Campagna Google sulle ricerche di usato in zona.", chi: "Marketing", quando: "Gennaio", impatto: "medio" }
+        ] },
+        { type: "timeline", title: "Tempi", steps: [
+          { when: "1 dic", title: "Nuovo form online", fatto: true },
+          { when: "15 dic", title: "Notifiche ai venditori" },
+          { when: "10 gen", title: "Campagna Google" },
+          { when: "31 gen", title: "Prima verifica", text: "Confronto con novembre." }
+        ] },
+        { type: "cols", blocks: [
+          { type: "elenco", title: "Cosa ci serve", items: [
+            { text: "Accesso al backend del sito", detail: "Per modificare il form." },
+            "Lista dei venditori di turno",
+            "Budget di 500 € al mese"
+          ] },
+          { type: "citazione", text: "Il lead più economico è quello che non perdiamo per strada.", author: "Team marketing" }
+        ] }
+      ]
+    },
+    {
+      label: "Slide libera",
+      title: "Esempio di blocco HTML libero",
+      subtitle: "Per le slide particolari: usa solo le classi f-… e i colori del tema.",
+      blocks: [
+        { type: "html", title: "Obiettivo a fine trimestre", html: "<div class=\"f-grid\"><div class=\"f-box-accent f-center\"><div class=\"f-label\">Oggi</div><div class=\"f-big\">96</div><div class=\"f-muted\">lead al mese dal sito</div></div><div class=\"f-box f-center\"><div class=\"f-label\">Obiettivo</div><div class=\"f-big f-accent\">136</div><div class=\"f-muted\">lead al mese dal sito</div></div></div><p style=\"margin-top:16px\"><span class=\"f-pill\">+40 lead</span> Avanzamento verso l'obiettivo</p><div class=\"f-bar\" style=\"margin-top:8px\"><i style=\"width:30%\"></i></div>" }
+      ]
+    }
+  ]
+};
+</script>
+<script src="https://andrea300992.github.io/dashboard-giacomel/motore-presentazioni.js" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Andrea300992/dashboard-giacomel@main/motore-presentazioni.js';document.body.appendChild(s)"></script>
+</body>
+</html>

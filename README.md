@@ -22,6 +22,19 @@ Se GitHub Pages non risponde, la stessa riga carica il motore dalla copia su jsD
 - `versioni/` contiene le copie fisse di ogni versione rilasciata, per poter tornare indietro.
 - `index.html` è una dashboard dimostrativa con **dati inventati**.
 
+## Motore delle presentazioni
+
+`motore-presentazioni.js` è un secondo motore, con la stessa grafica (home, sidebar, colori, modalità PC/Proiettore, stampa, schermata finale), usato dalla skill di Gemini per le **presentazioni libere**.
+Le pagine contengono l'oggetto `PRESENTAZIONE` (con `title`, `period` e `tabs`) e caricano:
+
+```html
+<script src="https://andrea300992.github.io/dashboard-giacomel/motore-presentazioni.js" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Andrea300992/dashboard-giacomel@main/motore-presentazioni.js';document.body.appendChild(s)"></script>
+```
+
+Oltre a tutti i blocchi delle dashboard, ha blocchi per raccontare: `messaggio` (il numero o l'azione chiave, in grande), `commento` (lettura, suggerimento o ricerca con fonti), `azione`, `confronto`, `timeline`, `griglia`, `elenco`, `citazione`, `testo` e un blocco `html` libero (ripulito da script, stili ed eventi; si colora solo con le classi `f-…` e i colori del tema).
+La stampa funziona come nelle dashboard: **Ctrl+Alt+P** anteprima, **Ctrl+P** stampa / PDF.
+`presentazione-demo.html` è una presentazione dimostrativa con **contenuti inventati**. Le copie fisse sono in `versioni/presentazioni-<versione>.js`.
+
 ## Regole per aggiornare il motore
 
 1. Si aggiunge, non si toglie: niente tipi di blocco o campi rimossi o rinominati, così le dashboard dei mesi passati continuano a funzionare.
