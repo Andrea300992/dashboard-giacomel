@@ -1,6 +1,6 @@
-# Dashboard Giacomel – motore grafico
+# Dashboard – motore grafico
 
-Motore grafico delle dashboard mensili di marketing di Fratelli Giacomel.
+Motore grafico delle dashboard mensili di marketing.
 
 **Developed by Andrea Carminati** · © 2026 Andrea Carminati. All rights reserved.
 
